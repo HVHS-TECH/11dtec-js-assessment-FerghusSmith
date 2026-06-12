@@ -6,4 +6,5 @@ let SouvlakiArray = ["chicken souvlaki","beef souvlaki","pork souvlaki","mixed s
 
 function addToCart(_itemGroup, _item, _price){
     console.log("running addToCart")
+    console.log(ArraysArray[0][0])
 }
