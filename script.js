@@ -7,5 +7,4 @@ let SouvlakiArray = ["chicken souvlaki","beef souvlaki","pork souvlaki","mixed s
 function addToCart(_itemGroup, _item, _price){
     console.log("running addToCart");
     let itemGroup = GroupArray[1];
-    console.log(itemGroup[3]);
 }
