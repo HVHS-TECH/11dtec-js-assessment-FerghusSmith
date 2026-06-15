@@ -9,10 +9,10 @@ let GroupArray = [      /* layout ["food name", food cost] */
 /* Dessert group */     [["Baklava", 5], ["Galaktoboureko", 5], ["Revani", 5], ["Ice cream", 5]]
 ];
 
-function addToCart(_itemGroup, _item, _price){
+function addToCart(_itemGroup, _itemSubGroup){
     console.log("running addToCart");
-    let itemCost = GroupArray[1][1][1];
-    let itemName = GroupArray[1][1][0];
+    let itemCost = GroupArray[_itemGroup][_itemSubGroup][1];
+    let itemName = GroupArray[_itemGroup][_itemSubGroup][0];
     console.log(itemCost);
     console.log(itemName);
 
