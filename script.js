@@ -11,5 +11,9 @@ let GroupArray = [      /* layout ["food name", food cost] */
 
 function addToCart(_itemGroup, _item, _price){
     console.log("running addToCart");
-    let itemGroup = GroupArray[1];
+    let itemCost = GroupArray[1][1][1];
+    let itemName = GroupArray[1][1][0];
+    console.log(itemCost);
+    console.log(itemName);
+
 }
