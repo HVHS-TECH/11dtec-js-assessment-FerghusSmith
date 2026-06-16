@@ -1,18 +1,45 @@
 console.log("Hello world!")
 
-let GroupArray = [      /* layout ["food name", food cost] */
-/* Gyros group */       [["Chicken Gyros", 20], ["Beef Gyros", 20], ["Pork Gyros", 20], ["Mixed Gyros", 20]], 
-/* Souvlaki group */    [["Chicken Souvlaki", 20], ["Beef Souvlaki", 20], ["Pork Souvlaki", 20], ["Mixed Souvlaki", 20]],
-/* Drinks group */      [["Coca-cola", 3], ["Sprite", 3], ["L&P", 3], ["Diet Coke", 2]],
-/* Sides group */       [["Hot Chips w Tzatziki", 6], ["Calamari", 8]],
-/* Vegetables group */  [["Greek salad", 15], ["Mousaka", 15], ["Yemista", 10]],
-/* Dessert group */     [["Baklava", 5], ["Galaktoboureko", 5], ["Revani", 5], ["Ice cream", 5]]
+let GroupArray = [
+    /*Gyros*/[
+        {item: "Chicken Gyros", cost: 20}, 
+        {item: "Beef Gyros", cost: 20}, 
+        {item: "Pork Gyros", cost: 20}, 
+        {item: "Mixed Gyros", cost: 20}
+    ], 
+    /*Souvlaki*/[
+        {item: "Chicken Souvlaki", cost: 20}, 
+        {item: "Beef Souvlaki", cost: 20}, 
+        {item: "Pork Souvlaki", cost: 20}, 
+        {item: "Mixed Souvlaki", cost: 20}
+    ],
+    /*Drinks*/[
+        {item: "Coca-cola", cost: 3}, 
+        {item: "Sprite", cost: 3}, 
+        {item: "L&P", cost: 3}, 
+        {item: "Diet Coke", cost: 2}
+    ],
+    /*sides*/[
+        {item: "Hot Chips w Tzatziki", cost: 6}, 
+        {item: "Calamari", cost: 8}
+    ],
+    /*vegetables*/[
+        {item: "Greek salad", cost: 15}, 
+        {item: "Mousaka", cost: 15}, 
+        {item: "Yemista", cost: 10}
+    ],
+    /*desserts*/[
+        {item: "Baklava", cost: 5}, 
+        {item: "Galaktoboureko", cost: 5}, 
+        {item: "Revani", cost: 5}, 
+        {item: "Ice cream", cost: 5}
+    ]
 ];
 
 function addToCart(_itemGroup, _itemSubGroup){
     console.log("running addToCart");
-    let itemCost = GroupArray[_itemGroup][_itemSubGroup][1];
-    let itemName = GroupArray[_itemGroup][_itemSubGroup][0];
+    let itemCost = GroupArray[_itemGroup][_itemSubGroup][item];
+    let itemName = GroupArray[_itemGroup][_itemSubGroup][cost];
     console.log(itemCost);
     console.log(itemName);
 
