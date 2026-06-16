@@ -38,8 +38,8 @@ let GroupArray = [
 
 function addToCart(_itemGroup, _itemSubGroup){
     console.log("running addToCart");
-    let itemCost = GroupArray[_itemGroup][_itemSubGroup][item];
-    let itemName = GroupArray[_itemGroup][_itemSubGroup][cost];
+    let thisItemCost = GroupArray[_itemGroup][_itemSubGroup][item];
+    let thisItemName = GroupArray[_itemGroup][_itemSubGroup][cost];
     console.log(itemCost);
     console.log(itemName);
 
