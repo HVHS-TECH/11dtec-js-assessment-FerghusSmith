@@ -2,43 +2,44 @@ console.log("Hello world!")
 
 let GroupArray = [
     /*Gyros*/[
-        {item: "Chicken Gyros", cost: 20}, 
-        {item: "Beef Gyros", cost: 20}, 
-        {item: "Pork Gyros", cost: 20}, 
-        {item: "Mixed Gyros", cost: 20}
+        {item: "Chicken Gyros", cost: 20, order: 0},
+        {item: "Beef Gyros", cost: 20, order: 0},
+        {item: "Pork Gyros", cost: 20, order: 0},
+        {item: "Mixed Gyros", cost: 20, order: 0}
     ], 
     /*Souvlaki*/[
-        {item: "Chicken Souvlaki", cost: 20}, 
-        {item: "Beef Souvlaki", cost: 20}, 
-        {item: "Pork Souvlaki", cost: 20}, 
-        {item: "Mixed Souvlaki", cost: 20}
+        {item: "Chicken Souvlaki", cost: 20, order: 0},
+        {item: "Beef Souvlaki", cost: 20, order: 0},
+        {item: "Pork Souvlaki", cost: 20, order: 0},
+        {item: "Mixed Souvlaki", cost: 20, order: 0}
     ],
     /*Drinks*/[
-        {item: "Coca-cola", cost: 3}, 
-        {item: "Sprite", cost: 3}, 
-        {item: "L&P", cost: 3}, 
-        {item: "Diet Coke", cost: 2}
+        {item: "Coca-cola", cost: 3, order: 0},
+        {item: "Sprite", cost: 3, order: 0},
+        {item: "L&P", cost: 3, order: 0},
+        {item: "Diet Coke", cost: 2, order: 0}
     ],
     /*sides*/[
-        {item: "Hot Chips w Tzatziki", cost: 6}, 
-        {item: "Calamari", cost: 8}
+        {item: "Hot Chips w Tzatziki", cost: 6, order: 0},
+        {item: "Calamari", cost: 8, order: 0}
     ],
     /*vegetables*/[
-        {item: "Greek salad", cost: 15}, 
-        {item: "Mousaka", cost: 15}, 
-        {item: "Yemista", cost: 10}
+        {item: "Greek salad", cost: 15, order: 0},
+        {item: "Mousaka", cost: 15, order: 0},
+        {item: "Yemista", cost: 10, order: 0}
     ],
     /*desserts*/[
-        {item: "Baklava", cost: 5}, 
-        {item: "Galaktoboureko", cost: 5}, 
-        {item: "Revani", cost: 5}, 
-        {item: "Ice cream", cost: 5}
+        {item: "Baklava", cost: 5, order: 0},
+        {item: "Galaktoboureko", cost: 5, order: 0},
+        {item: "Revani", cost: 5, order: 0},
+        {item: "Ice cream", cost: 5, order: 0}
     ]
 ];
 
-function addToCart(_itemGroup, _itemSubGroup){
-    console.log("running addToCart");
-    var thisItem = GroupArray[_itemGroup][_itemSubGroup];
-    console.log(thisItem.item+" costs $"+thisItem.cost);
 
+function addToCart(_itemGroup, _itemInfo){
+    console.log("running function addToCart");
+    GroupArray[_itemGroup][_itemInfo].order++;
+    var thisItem = GroupArray[_itemGroup][_itemInfo];
+    console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+thisItem.cost+" each and a total cost of $"+(thisItem.cost*thisItem.order));
 }
