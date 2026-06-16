@@ -35,11 +35,12 @@ let GroupArray = [
         {item: "Ice cream", cost: 5, order: 0}
     ]
 ];
-
+var totalCost = 0;
 
 function addToCart(_itemGroup, _itemInfo){
     console.log("running function addToCart");
     GroupArray[_itemGroup][_itemInfo].order++;
     var thisItem = GroupArray[_itemGroup][_itemInfo];
-    console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+thisItem.cost+" each and a total cost of $"+(thisItem.cost*thisItem.order));
+    totalCost = totalCost + thisItem.cost;
+    console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
 }
