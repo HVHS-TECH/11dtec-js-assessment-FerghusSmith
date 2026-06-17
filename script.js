@@ -56,7 +56,7 @@ function orderFood(){
     console.log("userName: "+userName);
     console.log("userMoney: "+userMoney);
     if (totalCost <= userMoney){
-        console.log("you can buy this")
+        console.log("payment accepted");
         getReceipt(userMoney, userName);
     } else {
         console.log("you can not but this")
