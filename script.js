@@ -1,6 +1,6 @@
 console.log("Hello world!")
 
-let GroupArray = [
+let groupArray = [
     /*Gyros*/[
         {item: "Chicken Gyros", cost: 20, order: 0},
         {item: "Beef Gyros", cost: 20, order: 0},
@@ -39,8 +39,8 @@ var totalCost = 0;
 
 function addToCart(_itemGroup, _itemInfo){
     console.log("running function addToCart");
-    GroupArray[_itemGroup][_itemInfo].order++;
-    var thisItem = GroupArray[_itemGroup][_itemInfo];
+    groupArray[_itemGroup][_itemInfo].order++;
+    var thisItem = groupArray[_itemGroup][_itemInfo];
     totalCost = totalCost + thisItem.cost;
     console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
     console.log("the total cost of your cart is $"+totalCost);
@@ -65,7 +65,13 @@ function orderFood(){
 
 function getReceipt(_userMoney, _userName){
     console.log("running fuction getReceipt")
-    for (var i = 0; i > GroupArray.length; i++){
-        console.log("i = "+i);
+    for (var i = 0; i < groupArray.length; i++){
+        for (var ii = 0; ii < groupArray[i].length; ii++){
+            console.log("i = "+i+" & ii = "+ii);
+            console.log(groupArray[i][ii].item);
+            if (groupArray[i][ii].order > 0){
+                console.log("you ordered "+groupArray[i][ii].item+" "+groupArray[i][ii].order+"x")
+            }
+        }
     }
 }
