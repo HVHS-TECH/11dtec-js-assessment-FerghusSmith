@@ -66,6 +66,7 @@ function orderFood(){
 function getReceipt(_userMoney, _userName){
     console.log("running fuction getReceipt");
     var order = groupArray;
+    var change = _userMoney - totalCost;
     for (var i = 0; i < order.length; i++){
         for (var ii = 0; ii < order[i].length; ii++){
             if (order[i][ii].order > 0){
@@ -74,4 +75,6 @@ function getReceipt(_userMoney, _userName){
         }
     }
     console.log("total cost: $"+totalCost);
+    console.log("change: $");
+    console.log("user: "+_userName);
 }
