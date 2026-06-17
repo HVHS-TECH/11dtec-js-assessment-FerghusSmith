@@ -64,13 +64,14 @@ function orderFood(){
 }
 
 function getReceipt(_userMoney, _userName){
-    console.log("running fuction getReceipt")
-    for (var i = 0; i < groupArray.length; i++){
-        for (var ii = 0; ii < groupArray[i].length; ii++){
+    console.log("running fuction getReceipt");
+    var order = groupArray;
+    for (var i = 0; i < order.length; i++){
+        for (var ii = 0; ii < order[i].length; ii++){
             console.log("i = "+i+" & ii = "+ii);
-            console.log(groupArray[i][ii].item);
-            if (groupArray[i][ii].order > 0){
-                console.log("you ordered "+groupArray[i][ii].item+" "+groupArray[i][ii].order+"x")
+            console.log(order[i][ii].item);
+            if (order[i][ii].order > 0){
+                console.log("you ordered "+order[i][ii].item+" "+order[i][ii].order+"x costing you $"+(order[i][ii].cost*order[i][ii].order))
             }
         }
     }
