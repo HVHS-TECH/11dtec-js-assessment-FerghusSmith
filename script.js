@@ -57,7 +57,14 @@ function orderFood(){
     console.log("userMoney: "+userMoney);
     if (totalCost <= userMoney){
         console.log("you can buy this")
+        getReciept(userMoney, userName);
     } else {
         console.log("you can not but this")
+    }
+}
+
+function getReciept(_userMoney, _userName){
+    for (var i = 0; i > GroupArray.length; i++){
+        console.log("i = "+i);
     }
 }
