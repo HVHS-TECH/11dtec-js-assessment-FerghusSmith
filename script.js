@@ -68,11 +68,10 @@ function getReceipt(_userMoney, _userName){
     var order = groupArray;
     for (var i = 0; i < order.length; i++){
         for (var ii = 0; ii < order[i].length; ii++){
-            console.log("i = "+i+" & ii = "+ii);
-            console.log(order[i][ii].item);
             if (order[i][ii].order > 0){
                 console.log("you ordered "+order[i][ii].item+" "+order[i][ii].order+"x costing you $"+(order[i][ii].cost*order[i][ii].order))
             }
         }
     }
+    console.log("total cost: $"+totalCost);
 }
