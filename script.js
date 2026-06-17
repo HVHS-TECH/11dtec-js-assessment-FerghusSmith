@@ -1,5 +1,3 @@
-console.log("Hello world!")
-
 let groupArray = [
     /*Gyros*/[
         {item: "Chicken Gyros", cost: 20, order: 0},
