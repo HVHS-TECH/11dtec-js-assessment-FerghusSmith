@@ -75,6 +75,6 @@ function getReceipt(_userMoney, _userName){
         }
     }
     console.log("total cost: $"+totalCost);
-    console.log("change: $");
+    console.log("change: $"+change);
     console.log("user: "+_userName);
 }
