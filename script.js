@@ -44,4 +44,20 @@ function addToCart(_itemGroup, _itemInfo){
     totalCost = totalCost + thisItem.cost;
     console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
     console.log("the total cost of your cart is $"+totalCost);
+    return totalCost;
+}
+
+function orderFood(){
+    console.log("running function orderFood")
+    const MONEY_FIELD = document.getElementById("moneyField");
+    const NAME_FIELD = document.getElementById("nameField");
+    userMoney = MONEY_FIELD.value;
+    userName = NAME_FIELD.value;
+    console.log("userName: "+userName);
+    console.log("userMoney: "+userMoney);
+    if (totalCost <= userMoney){
+        console.log("you can buy this")
+    } else {
+        console.log("you can not but this")
+    }
 }

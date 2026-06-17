@@ -62,9 +62,12 @@
 <button onsubmit="return false;" onclick=addToCart(5,3)>add to cart</button>
 
 <h2>order</h2>
-<form>
-    <title>name:</title>
-    <input>
+<form onsubmit="return false;">
+    <label for="formName";>name:</label><br>
+    <input type="text" id="nameField" name="formName" placeholder="name:"><br>
+    <label for="formMoney";>money:</label><br>
+    <input type="text" id="moneyField" name="formMoney" placeholder="$$$"><br>
+    <input type="submit" onclick="orderFood()">
 </form>
 
 
