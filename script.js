@@ -57,13 +57,14 @@ function orderFood(){
     console.log("userMoney: "+userMoney);
     if (totalCost <= userMoney){
         console.log("you can buy this")
-        getReciept(userMoney, userName);
+        getReceipt(userMoney, userName);
     } else {
         console.log("you can not but this")
     }
 }
 
-function getReciept(_userMoney, _userName){
+function getReceipt(_userMoney, _userName){
+    console.log("running fuction getReceipt")
     for (var i = 0; i > GroupArray.length; i++){
         console.log("i = "+i);
     }
