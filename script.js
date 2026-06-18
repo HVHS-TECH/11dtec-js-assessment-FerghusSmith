@@ -42,6 +42,7 @@ function addToCart(_itemGroup, _itemInfo){
     totalCost = totalCost + thisItem.cost;
     console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
     console.log("the total cost of your cart is $"+totalCost);
+    sessionStorage.setItem(groupArray);
     return totalCost;
 }
 
