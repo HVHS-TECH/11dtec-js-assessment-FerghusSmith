@@ -34,8 +34,7 @@ let groupArray = [
     ]
 ];
 var totalCost = 0;
-var savedArray = JSON.parse(sessionStorage.getItem("test"));
-console.log(savedArray[1][1].item);
+var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
 
 function addToCart(_itemGroup, _itemInfo){
     console.log("running function addToCart");
@@ -44,7 +43,7 @@ function addToCart(_itemGroup, _itemInfo){
     totalCost = totalCost + thisItem.cost;
     console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
     console.log("the total cost of your cart is $"+totalCost);
-    sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
+    sessionStorage.setItem("savedArray", JSON.stringify(groupArray[_itemGroup][_itemInfo]));
     return totalCost;
 }
 
