@@ -37,6 +37,7 @@ var totalCost = 0;
 var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
 console.log(savedArray[1][1].order)
 
+
 function addToCart(_itemGroup, _itemInfo){
     console.log("running function addToCart");
     groupArray[_itemGroup][_itemInfo].order++;
