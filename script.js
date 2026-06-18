@@ -44,8 +44,6 @@ if (savedArray = null){
     console.log(savedArray[0]);
     console.log(savedArray[0][0]);
 }
-console.log(savedArray[0]);
-console.log(savedArray[0][0]);
 
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
