@@ -1,3 +1,4 @@
+/* variables */
 let groupArray = [
     /*Gyros*/[
         {item: "Chicken Gyros", cost: 20, order: 0},
@@ -35,11 +36,18 @@ let groupArray = [
 ];
 var totalCost = 0;
 var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
-console.log(savedArray);
+
+/* main code */
+
+if (savedArray = null){
+    console.log(savedArray);
+    console.log(savedArray[0]);
+    console.log(savedArray[0][0]);
+}
 console.log(savedArray[0]);
 console.log(savedArray[0][0]);
 
-
+/* functions */
 function addToCart(_itemGroup, _itemInfo){
     console.log("running function addToCart");
     groupArray[_itemGroup][_itemInfo].order++;
