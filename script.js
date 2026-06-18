@@ -80,7 +80,7 @@ function orderFood(){
 
 function getReceipt(_userMoney, _userName){
     console.log("running fuction getReceipt");
-    var order = savedArrayArray;
+    var order = savedArray;
     var change = _userMoney - totalCost;
     for (var i = 0; i < order.length; i++){
         for (var ii = 0; ii < order[i].length; ii++){
