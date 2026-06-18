@@ -7,6 +7,15 @@
 <body>
 <h1>Eugyros</h1>
 
+<h2>order</h2>
+<form onsubmit="return false;">
+    <label for="formName";>name:</label><br>
+    <input type="text" id="nameField" name="formName" placeholder="name:"><br>
+    <label for="formMoney";>money:</label><br>
+    <input type="text" id="moneyField" name="formMoney" placeholder="$$$"><br>
+    <input type="submit" onclick="orderFood()">
+</form>
+
 <h2>Gryos</h2>
 <p>Chicken Gyros $20</p>
 <button onsubmit="return false;" onclick=addToCart(0,0)>add to cart</button>
@@ -60,16 +69,6 @@
 <button onsubmit="return false;" onclick=addToCart(5,2)>add to cart</button>
 <p>Ice cream $5</p>
 <button onsubmit="return false;" onclick=addToCart(5,3)>add to cart</button>
-
-<h2>order</h2>
-<form onsubmit="return false;">
-    <label for="formName";>name:</label><br>
-    <input type="text" id="nameField" name="formName" placeholder="name:"><br>
-    <label for="formMoney";>money:</label><br>
-    <input type="text" id="moneyField" name="formMoney" placeholder="$$$"><br>
-    <input type="submit" onclick="orderFood()">
-</form>
-
 
 <script src="script.js"></script>
 </body>
