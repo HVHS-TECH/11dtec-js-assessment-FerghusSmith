@@ -55,7 +55,7 @@ function addToCart(_itemGroup, _itemInfo){
     console.log("the total cost of your cart is $"+totalCost);
     sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
     savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
-    console.log(savedArray.order)
+    console.log(savedArray[_itemGroup][_itemInfo])
     return totalCost;
 }
 
