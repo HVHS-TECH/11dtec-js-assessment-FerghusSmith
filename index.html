@@ -17,8 +17,12 @@
 </form>
 
 <h2>Gryos</h2>
-<p>Chicken Gyros $20</p>
-<button onsubmit="return false;" onclick=addToCart(0,0)>add to cart</button>
+
+<form onsubmit="return false">
+    <label>Chicken Gyros $20</label><br>
+    <input type="number" id="nameField" name="formOrder" placeholder="123">
+    <button onsubmit="return false;" onclick=addToCart(0,0)>add to cart</button>
+</form>
 <p>Beef Gyros $20</p>
 <button onsubmit="return false;" onclick=addToCart(0,1)>add to cart</button>
 <p>Pork Gyros $20</p>
@@ -62,9 +66,6 @@
 
 <h2>Dessert</h2>
 <p>Baklava $5</p>
-<form>
-    <input>
-</form>
 <button onsubmit="return false;" onclick=addToCart(5,0)>add to cart</button>
 <p>Galaktoboureko $5</p>
 <button onsubmit="return false;" onclick=addToCart(5,1)>add to cart</button>
