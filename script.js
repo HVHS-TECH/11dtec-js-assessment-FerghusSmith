@@ -51,8 +51,9 @@ if (savedArray != null){
 function addToCart(_itemGroup, _itemInfo){
     console.log("running function addToCart");
     var thisOrder = Number(document.getElementById("00Field"));
-    for (var e = 0; e < thisOrder; e++){
+    for (var i = 0; i > thisOrder; i++){
         groupArray[_itemGroup][_itemInfo].order++;
+        console.log("for loop loop "+i);
     }
     var thisItem = groupArray[_itemGroup][_itemInfo];
     totalCost = totalCost + thisItem.cost;
