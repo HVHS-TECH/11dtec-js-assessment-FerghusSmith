@@ -50,7 +50,7 @@ if (savedArray != null){
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
     console.log("running function addToCart");
-    var thisOrder = document.getElementById("00Field");
+    var thisOrder = Number(document.getElementById("00Field"));
     for (var e = 0; e < thisOrder; e++){
         groupArray[_itemGroup][_itemInfo].order++;
     }
