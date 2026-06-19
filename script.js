@@ -50,7 +50,10 @@ if (savedArray != null){
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
     console.log("running function addToCart");
-    groupArray[_itemGroup][_itemInfo].order++;
+    var thisOrder = document.getElementById("00Field");
+    for (var e = 0; e < thisOrder; e++){
+        groupArray[_itemGroup][_itemInfo].order++;
+    }
     var thisItem = groupArray[_itemGroup][_itemInfo];
     totalCost = totalCost + thisItem.cost;
     console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
