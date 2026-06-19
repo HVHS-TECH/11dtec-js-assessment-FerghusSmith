@@ -37,6 +37,7 @@ let groupArray = [
 var totalCost = 0;
 var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
 
+const FIELD_00 = document.getElementById("field00");
 /* main code */
 
 if (savedArray != null){
@@ -50,8 +51,8 @@ if (savedArray != null){
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
     console.log("running function addToCart");
-    var thisOrder = Number(document.getElementById("00Field"));
-    for (var i = 0; i > thisOrder; i++){
+    console.log("FIELD_00: "+FIELD_00)
+    for (var a = 0; a = FIELD_00; a++){
         groupArray[_itemGroup][_itemInfo].order++;
         console.log("for loop loop "+i);
     }
@@ -62,6 +63,7 @@ function addToCart(_itemGroup, _itemInfo){
     sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
     savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
     console.log(savedArray[_itemGroup][_itemInfo]);
+    
 }
 
 function orderFood(){
