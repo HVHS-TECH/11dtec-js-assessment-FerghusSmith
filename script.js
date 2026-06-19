@@ -58,6 +58,7 @@ function addToCart(_itemGroup, _itemInfo){
     sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
     savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
     console.log(savedArray[_itemGroup][_itemInfo]);
+    
 }
 
 function orderFood(){
