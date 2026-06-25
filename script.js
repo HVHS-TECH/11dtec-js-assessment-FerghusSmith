@@ -39,7 +39,7 @@ var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
 
 
 /* main code */
-
+const OUTPUT_00 = document.getElementById("listOutput");
 if (savedArray != null){
     console.log(savedArray);
     console.log(savedArray[0]);
@@ -51,7 +51,6 @@ if (savedArray != null){
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
     const FIELD_00 = document.getElementById("field00");
-    const OUTPUT_00 = document.getElementById("testDiv");
     thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
@@ -66,7 +65,7 @@ function addToCart(_itemGroup, _itemInfo){
     }
     var thisItem = groupArray[_itemGroup][_itemInfo];
     totalCost = totalCost + thisItem.cost;
-    OUTPUT_00.innerHTML="<p>1x</p>";
+    OUTPUT_00.innerHTML = "<p>blah blah blah</p>"
     console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
     console.log("the total cost of your cart is $"+totalCost);
     sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
