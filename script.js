@@ -51,6 +51,7 @@ if (savedArray != null){
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
     const FIELD_00 = document.getElementById("field00");
+    const OUTPUT_00 = divOrder00.innerHTML;
     thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
