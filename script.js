@@ -1,5 +1,4 @@
 /* variables */
-const OUTPUT_00 = document.getElementById("listOutput");
 let groupArray = [
     /*Gyros*/[
         {item: "Chicken Gyros", cost: 20, order: 0},
@@ -65,7 +64,6 @@ function addToCart(_itemGroup, _itemInfo){
     }
     var thisItem = groupArray[_itemGroup][_itemInfo];
     totalCost = totalCost + thisItem.cost;
-    OUTPUT_00.innerHTML += "<p>blah blah blah</p>"
     console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
     console.log("the total cost of your cart is $"+totalCost);
     sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
