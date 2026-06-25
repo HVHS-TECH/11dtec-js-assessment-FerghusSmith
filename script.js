@@ -51,7 +51,7 @@ if (savedArray != null){
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
     const FIELD_00 = document.getElementById("field00");
-    const OUTPUT_00 = divOrder00.innerHTML;
+    const OUTPUT_00 = document.getElementById("divOrdered00");
     thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
@@ -71,7 +71,7 @@ function addToCart(_itemGroup, _itemInfo){
     sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
     savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
     console.log(savedArray[_itemGroup][_itemInfo]);
-    
+    OUTPUT_00.innerHTML = (thisItem.order+"x");
 }
 
 function orderFood(){
