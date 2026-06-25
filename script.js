@@ -1,4 +1,5 @@
 /* variables */
+const OUTPUT_00 = document.getElementById("listOutput");
 let groupArray = [
     /*Gyros*/[
         {item: "Chicken Gyros", cost: 20, order: 0},
@@ -39,7 +40,6 @@ var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
 
 
 /* main code */
-const OUTPUT_00 = document.getElementById("listOutput");
 if (savedArray != null){
     console.log(savedArray);
     console.log(savedArray[0]);
