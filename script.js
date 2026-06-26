@@ -38,6 +38,7 @@ var totalCost = 0;
 var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
 
 const OUTPUT = document.getElementById("output");
+OUTPUT.innerHTML = "<p>hi</p>";
 /* main code */
 if (savedArray != null){
     console.log(savedArray);
@@ -69,7 +70,6 @@ function addToCart(_itemGroup, _itemInfo){
     sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
     savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
     console.log(savedArray[_itemGroup][_itemInfo]);
-    OUTPUT.innerHTML = "<p>hi</p>";
 }
 
 function orderFood(){
