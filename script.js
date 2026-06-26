@@ -37,8 +37,7 @@ let groupArray = [
 var totalCost = 0;
 var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
 
-const OUTPUT = document.getElementById("output");
-OUTPUT.innerHTML = "<p>hi</p>";
+
 /* main code */
 if (savedArray != null){
     console.log(savedArray);
@@ -50,6 +49,7 @@ if (savedArray != null){
 
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
+    document.getElementById("output").innerHTML += "<p>hsjweiejs</p>"
     const FIELD_00 = document.getElementById("field00");
     thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
