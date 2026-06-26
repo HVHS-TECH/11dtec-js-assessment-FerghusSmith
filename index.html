@@ -16,18 +16,20 @@
     <input type="text" id="moneyField" name="formMoney" placeholder="$$$"><br>
     <input type="submit" onclick="orderFood()">
 </form>
-<div id="output" class="output"></div>
+
 <h2>Gryos</h2>
 
 <form onsubmit="return false">
     <label for="form00">Chicken Gyros $20</label><br>
     <input type="text" id="field00" name="form00" placeholder="1" min="0">
     <input type="submit" value="add to cart" onclick=addToCart(0,0)>
+    <div id="output00"></div>
 </form>
 <form onsubmit="return false">
     <label for="form01">Beef Gyros $20</label><br>
     <input type="number" id="01Field" name="form01" placeholder="1" min="0">
     <button onsubmit="return false;" onclick=addToCart(0,1)>add to cart</button>
+    <div id="output00"></div>
 </form>
 <form onsubmit="return false">
     <label for="form02">Pork Gyros $20</label><br>
