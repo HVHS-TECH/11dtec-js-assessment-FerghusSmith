@@ -1,3 +1,7 @@
 nav {
-    
+    position: fixed;
+    top: 0;
+    right: 50%;
+    background-color: white;
+    justify-self: center;
 }
