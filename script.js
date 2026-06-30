@@ -100,5 +100,5 @@ function getReceipt(_userMoney, _userName){
     console.log("total cost: $"+totalCost);
     console.log("change: $"+change);
     console.log("user: "+_userName);
-    document.getElementById(receiptOutput).inneHTML += order[i][ii].order+" "+order[i][ii].item+" $"+(order[i][ii].cost*order[i][ii].order);
+    document.getElementById("receiptOutput").innerHTML += order[i][ii].order+" "+order[i][ii].item+" $"+(order[i][ii].cost*order[i][ii].order);
 }
