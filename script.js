@@ -78,7 +78,7 @@ function orderFood(){
     userName = NAME_FIELD.value;
     console.log("userName: "+userName);
     console.log("userMoney: "+userMoney);
-    if (totalCost <= userMoney){
+    if (userMoney >= totalCost){
         console.log("payment accepted");
         getReceipt(userMoney, userName);
     } else {
@@ -101,8 +101,8 @@ function getReceipt(_userMoney, _userName){
         }
     }
     document.getElementById("receiptOutput").innerHTML += "<p>"+totalCost+"</p>"
-    document.getElementById("receiptOutput").innerHTML += "<p>"+userMoney+"</p>"
-    document.getElementById("receiptOutput").innerHTML += "<p>"+change+"</p>"
+    document.getElementById("receiptOutput").innerHTML += "<p>"+_userMoney+"</p>"
+    document.getElementById("receiptOutput").innerHTML += "<p>"+(_userMoney-totalCost)+"</p>"
     console.log("total cost: $"+totalCost);
     console.log("change: $"+change);
     console.log("user: "+_userName);
