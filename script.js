@@ -103,4 +103,3 @@ function getReceipt(_userMoney, _userName){
     console.log("user: "+_userName);
     document.getElementById("receiptOutput").innerHTML += "<p>"+order[i][ii].order+" "+order[i][ii].item+" $"+(order[i][ii].order*order[i][ii].cost)+"</p>"
 }
-    
