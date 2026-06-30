@@ -94,6 +94,7 @@ function getReceipt(_userMoney, _userName){
         for (var ii = 0; ii < order[i].length; ii++){
             if (order[i][ii].order > 0){
                 console.log(order[i][ii].order+" "+order[i][ii].item+" costing $"+(order[i][ii].cost*order[i][ii].order))
+                document.getElementById("receiptOutput").innerHTML += "<p>"+order[i][ii].order+" "+order[i][ii].item+" $"+(order[i][ii].order*order[i][ii].cost)+"</p>"
             }
         }
     }
@@ -102,3 +103,4 @@ function getReceipt(_userMoney, _userName){
     console.log("user: "+_userName);
     document.getElementById("receiptOutput").innerHTML += "<p>"+order[i][ii].order+" "+order[i][ii].item+" $"+(order[i][ii].order*order[i][ii].cost)+"</p>"
 }
+    
