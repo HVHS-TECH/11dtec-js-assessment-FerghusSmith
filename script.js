@@ -90,6 +90,7 @@ function getReceipt(_userMoney, _userName){
     console.log("running fuction getReceipt");
     var order = savedArray;
     var change = _userMoney - totalCost;
+    document.getElementById("receiptOutput").innerHTML += "<p>"+userName+"</p>"
     for (var i = 0; i < order.length; i++){
         for (var ii = 0; ii < order[i].length; ii++){
             if (order[i][ii].order > 0){
@@ -98,6 +99,9 @@ function getReceipt(_userMoney, _userName){
             }
         }
     }
+    document.getElementById("receiptOutput").innerHTML += "<p>"+totalCost+"</p>"
+    document.getElementById("receiptOutput").innerHTML += "<p>"+userMoney+"</p>"
+    document.getElementById("receiptOutput").innerHTML += "<p>"+change+"</p>"
     console.log("total cost: $"+totalCost);
     console.log("change: $"+change);
     console.log("user: "+_userName);
