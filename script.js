@@ -94,7 +94,7 @@ function getReceipt(_userMoney, _userName){
     for (var i = 0; i < order.length; i++){
         for (var ii = 0; ii < order[i].length; ii++){
             if (order[i][ii].order > 0){
-                totalCost = totalCost + (order[i][ii].cost*order[i][ii]);
+                totalCost = totalCost + (order[i][ii].cost*order[i][ii].order);
                 console.log(order[i][ii].order+" "+order[i][ii].item+" costing $"+(order[i][ii].cost*order[i][ii].order))
                 document.getElementById("receiptOutput").innerHTML += "<p>"+order[i][ii].order+" "+order[i][ii].item+" $"+(order[i][ii].order*order[i][ii].cost)+"</p>"
             }
