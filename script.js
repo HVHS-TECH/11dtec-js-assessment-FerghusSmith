@@ -105,7 +105,7 @@ function getReceipt(_userMoney, _userName){
             }
         }
     }
-    document.getElementById("receiptOutput").innerHTML += "<p>"+totalCost+"</p>"
+    document.getElementById("receiptOutput").innerHTML += "<p>total cost:"+totalCost+"</p>"
     document.getElementById("receiptOutput").innerHTML += "<p>"+_userMoney+"</p>"
     document.getElementById("receiptOutput").innerHTML += "<p>"+(_userMoney-totalCost)+"</p>"
     console.log("total cost: $"+totalCost);
