@@ -78,6 +78,11 @@ function orderFood(){
     userName = NAME_FIELD.value;
     console.log("userName: "+userName);
     console.log("userMoney: "+userMoney);
+    for (var o = 0; o < order.length; o++){
+        for (var oo = 0; oo < order[o].length; oo++){
+            totalCost = totalCost + order[o][oo].cost*order[o][oo].order;
+        }
+    }
     if ((userMoney-totalCost) >= 0){
         console.log("payment accepted");
         getReceipt(userMoney, userName);
