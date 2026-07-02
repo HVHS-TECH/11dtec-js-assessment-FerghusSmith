@@ -78,9 +78,9 @@ function orderFood(){
     userName = NAME_FIELD.value;
     console.log("userName: "+userName);
     console.log("userMoney: "+userMoney);
-    for (var o = 0; o < order.length; o++){
-        for (var oo = 0; oo < order[o].length; oo++){
-            totalCost = totalCost + order[o][oo].cost*order[o][oo].order;
+    for (var o = 0; o < savedArray.length; o++){
+        for (var oo = 0; oo < savedArray[o].length; oo++){
+            totalCost = totalCost + savedArray[o][oo].cost*savedArray[o][oo].order;
         }
     }
     if ((userMoney-totalCost) >= 0){
@@ -93,7 +93,7 @@ function orderFood(){
 
 function getReceipt(_userMoney, _userName){
     console.log("running fuction getReceipt");
-    var order = savedArray;
+    order = savedArray;
     var change = _userMoney - totalCost;
     document.getElementById("receiptOutput").innerHTML += "<p>"+userName+"</p>"
     for (var i = 0; i < order.length; i++){
