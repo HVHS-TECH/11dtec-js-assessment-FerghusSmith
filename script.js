@@ -78,6 +78,7 @@ function orderFood(){
     userName = NAME_FIELD.value;
     console.log("userName: "+userName);
     console.log("userMoney: "+userMoney);
+    totalCost = 0;
     for (var o = 0; o < savedArray.length; o++){
         for (var oo = 0; oo < savedArray[o].length; oo++){
             totalCost = totalCost + savedArray[o][oo].cost*savedArray[o][oo].order;
@@ -95,7 +96,7 @@ function getReceipt(_userMoney, _userName){
     console.log("running fuction getReceipt");
     order = savedArray;
     var change = _userMoney - totalCost;
-    document.getElementById("receiptOutput").innerHTML += "<p>"+userName+"</p>"
+    document.getElementById("receiptOutput").innerHTML = "<p>"+userName+"</p>"
     for (var i = 0; i < order.length; i++){
         for (var ii = 0; ii < order[i].length; ii++){
             if (order[i][ii].order > 0){
