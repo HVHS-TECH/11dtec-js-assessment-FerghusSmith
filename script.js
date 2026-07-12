@@ -71,27 +71,29 @@ function addToCart(_itemGroup, _itemInfo){
 }
 
 function removeFromCart(_itemGroup, _itemInfo){
-    const FIELD_00 = document.getElementById("field00");
-    thisField = Number(FIELD_00.value);
-    console.log("running function addToCart");
-    console.log("thisField: "+thisField);
-    if (thisField < 1){
-        var thisField = 1;
-        console.log("thisField set to "+thisField);
+    if(groupArray[_itemGroup][_itemInfo].order > 0){
+        const FIELD_00 = document.getElementById("field00");
+        thisField = Number(FIELD_00.value);
+        console.log("running function addToCart");
+        console.log("thisField: "+thisField);
+        if (thisField < 1){
+            var thisField = 1;
+            console.log("thisField set to "+thisField);
+        }
+        console.log("if statemnet done")
+        for (var a = 0; a < thisField; a++){
+            groupArray[_itemGroup][_itemInfo].order--;
+            console.log("for loop loop "+a);
+        }
+        var thisItem = groupArray[_itemGroup][_itemInfo];
+        totalCost = totalCost - thisItem.cost;
+        console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
+        console.log("the total cost of your cart is $"+totalCost);
+        sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
+        savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
+        console.log(savedArray[_itemGroup][_itemInfo]);
+        document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
     }
-    console.log("if statemnet done")
-    for (var a = 0; a < thisField; a++){
-        groupArray[_itemGroup][_itemInfo].order--;
-        console.log("for loop loop "+a);
-    }
-    var thisItem = groupArray[_itemGroup][_itemInfo];
-    totalCost = totalCost - thisItem.cost;
-    console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
-    console.log("the total cost of your cart is $"+totalCost);
-    sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
-    savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
-    console.log(savedArray[_itemGroup][_itemInfo]);
-    document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
 }
 
 function orderFood(){
