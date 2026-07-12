@@ -69,7 +69,7 @@ function addToCart(_itemGroup, _itemInfo){
     console.log(savedArray[_itemGroup][_itemInfo]);
     document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
 }
-
+function removeFromCart()
 function orderFood(){
     console.log("running function orderFood")
     const MONEY_FIELD = document.getElementById("moneyField");
