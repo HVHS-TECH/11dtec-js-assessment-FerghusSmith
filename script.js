@@ -116,14 +116,14 @@ function getReceipt(_userMoney, _userName){
 }
 function clearCart(){
     console.log("running function 'clearCart'");
-    order = savedArray;
-    for (var o = 0; o < order.length; o++){
-        for (var oo = 0; oo < order[o].length; oo++){
-            order[o][oo].order = 0;
-            console.log(order[o][oo].item+": order set to 0");
+    for (var o = 0; o < savedArray.length; o++){
+        for (var oo = 0; oo < savedArray[o].length; oo++){
+            savedArray[o][oo].order = 0;
+            console.log(savedArray[o][oo].item+": order has been set to 0");
             document.getElementById("output"+o+oo).innerHTML = "" 
         }
     }
     totalCost = 0;
+    sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
     console.log("cart cleared")
 }
