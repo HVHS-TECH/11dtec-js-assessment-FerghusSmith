@@ -117,11 +117,11 @@ function getReceipt(_userMoney, _userName){
 function clearCart(){
     console.log("running function 'clearCart'");
     order = savedArray;
-    for (var i = 0; i < order.length; i++){
-        for (var ii = 0; ii < order[i].length; ii++){
-            order[i][ii].order = 0;
-            console.log(order[i][ii]+" has been set to 0");
-            
+    for (var o = 0; o < order.length; o++){
+        for (var oo = 0; oo < order[o].length; oo++){
+            order[o][oo].order = 0;
+            console.log(order[o][oo]+" has been set to 0");
+            document.getElementById("output"+o+oo).innerHTML = "" 
         }
     }
     totalCost = 0;
