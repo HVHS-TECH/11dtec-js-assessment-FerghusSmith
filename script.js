@@ -51,15 +51,12 @@ function addToCart(_itemGroup, _itemInfo){
     thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
-    if (thisField < 1){
+    if (isNaN(thisField) = false){
         var thisField = 1;
         console.log("thisField set to "+thisField);
     }
     console.log("if statemnet done")
-    for (var a = 0; a < thisField; a++){
-        groupArray[_itemGroup][_itemInfo].order++;
-        console.log("for loop loop "+a);
-    }
+    groupArray[_itemGroup][_itemInfo].order = groupArray[_itemGroup][_itemInfo].order + thisField;
     var thisItem = groupArray[_itemGroup][_itemInfo];
     totalCost = totalCost + thisItem.cost;
     console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
@@ -76,14 +73,14 @@ function removeFromCart(_itemGroup, _itemInfo){
         thisField = Number(FIELD_00.value);
         console.log("running function addToCart");
         console.log("thisField: "+thisField);
-        if (thisField < 1){
+        if (isNaN(thisField) = true){
             var thisField = 1;
             console.log("thisField set to "+thisField);
         }
         console.log("if statemnet done")
-        for (var a = 0; a < thisField; a++){
-            groupArray[_itemGroup][_itemInfo].order--;
-            console.log("for loop loop "+a);
+        groupArray[_itemGroup][_itemInfo].order = groupArray[_itemGroup][_itemInfo].order - thisField;
+        if(groupArray[_itemGroup][_itemInfo].order < 0){
+            groupArray[_itemGroup][_itemInfo].order = 0;
         }
         var thisItem = groupArray[_itemGroup][_itemInfo];
         totalCost = totalCost - thisItem.cost;
@@ -92,7 +89,11 @@ function removeFromCart(_itemGroup, _itemInfo){
         sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
         savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
         console.log(savedArray[_itemGroup][_itemInfo]);
-        document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
+        if(groupArray[_itemGroup][_itemInfo].order != 0){
+            document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
+        }else{
+            document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = ""
+        }
     }
 }
 
