@@ -6,7 +6,7 @@ let groupArray = [
         {item: "Beef Gyros", cost: 20, order: 0},
         {item: "Pork Gyros", cost: 20, order: 0},
         {item: "Mixed Gyros", cost: 20, order: 0}
-    ], 
+    ],
     /*Souvlaki*/[
         {item: "Chicken Souvlaki", cost: 20, order: 0},
         {item: "Beef Souvlaki", cost: 20, order: 0},
