@@ -120,7 +120,7 @@ function clearCart(){
     for (var o = 0; o < order.length; o++){
         for (var oo = 0; oo < order[o].length; oo++){
             order[o][oo].order = 0;
-            console.log(order[o][oo]+" has been set to 0");
+            console.log(order[o][oo].item+": order set to 0");
             document.getElementById("output"+o+oo).innerHTML = "" 
         }
     }
