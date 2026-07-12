@@ -1,4 +1,5 @@
 /* variables */
+console.log("running script.js");
 let groupArray = [
     /*Gyros*/[
         {item: "Chicken Gyros", cost: 20, order: 0},
