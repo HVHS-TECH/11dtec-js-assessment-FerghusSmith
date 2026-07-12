@@ -51,7 +51,7 @@ function addToCart(_itemGroup, _itemInfo){
     thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
-    if (isNaN(thisField) = false){
+    if (thisField < 1){
         var thisField = 1;
         console.log("thisField set to "+thisField);
     }
@@ -73,7 +73,7 @@ function removeFromCart(_itemGroup, _itemInfo){
         thisField = Number(FIELD_00.value);
         console.log("running function addToCart");
         console.log("thisField: "+thisField);
-        if (isNaN(thisField) = true){
+        if (thisField < 1){
             var thisField = 1;
             console.log("thisField set to "+thisField);
         }
