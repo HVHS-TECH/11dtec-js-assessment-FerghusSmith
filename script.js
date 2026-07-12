@@ -121,6 +121,7 @@ function clearCart(){
         for (var ii = 0; ii < order[i].length; ii++){
             order[i][ii].order = 0;
             console.log(order[i][ii]+" has been set to 0");
+            
         }
     }
     totalCost = 0;
