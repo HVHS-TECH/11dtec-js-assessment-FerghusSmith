@@ -114,3 +114,15 @@ function getReceipt(_userMoney, _userName){
     console.log("user: "+_userName);
     document.getElementById("receiptOutput").innerHTML += "<p>"+order[i][ii].order+" "+order[i][ii].item+" $"+(order[i][ii].order*order[i][ii].cost)+"</p>"
 }
+function clearCart(){
+    console.log("running function 'clearCart'");
+    order = savedArray;
+    for (var i = 0; i < order.length; i++){
+        for (var ii = 0; ii < order[i].length; ii++){
+            order[i][ii].order = 0;
+            console.log(order[i][ii]+" has been set to 0");
+        }
+    }
+    totalCost = 0;
+    console.log("cart cleared")
+}
