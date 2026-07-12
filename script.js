@@ -46,9 +46,18 @@ if (savedArray != null){
 }
 
 /* functions */
+function removeFromCart(_itemGroup, _itemInfo){
+    thisField = (Number(FIELD_00.value));
+    changeCart(_itemGroup, _itemInfo)
+}
+
 function addToCart(_itemGroup, _itemInfo){
+    thisField = (Number(FIELD_00.value));
+    changeCart(_itemGroup, _itemInfo)
+}
+
+function changeCart(_itemGroup, _itemInfo){
     const FIELD_00 = document.getElementById("field00");
-    thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
     if (thisField < 1){
@@ -69,7 +78,7 @@ function addToCart(_itemGroup, _itemInfo){
     console.log(savedArray[_itemGroup][_itemInfo]);
     document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
 }
-function removeFromCart()
+
 function orderFood(){
     console.log("running function orderFood")
     const MONEY_FIELD = document.getElementById("moneyField");
