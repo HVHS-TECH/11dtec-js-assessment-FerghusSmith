@@ -126,4 +126,5 @@ function clearCart(){
     totalCost = 0;
     sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
     console.log("cart cleared")
+    console.log(savedArray);
 }
