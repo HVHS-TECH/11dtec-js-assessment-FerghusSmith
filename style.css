@@ -10,3 +10,12 @@ nav {
     display: grid;
     grid-template-columns: auto auto;
 }
+
+img{
+    height: 500px;
+    width: 500px;
+}
+
+.img{
+    justify-self: right;
+}
