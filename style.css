@@ -5,3 +5,8 @@ nav {
     background-color: white;
     justify-self: center;
 }
+
+.gyrosGrid {
+    display: grid;
+    grid-template-columns: auto auto;
+}
