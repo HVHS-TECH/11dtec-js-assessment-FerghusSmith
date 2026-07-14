@@ -10,8 +10,3 @@ nav {
     display: grid;
     grid-template-columns: auto auto;
 }
-
-.title{
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
