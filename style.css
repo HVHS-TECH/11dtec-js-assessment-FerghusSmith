@@ -17,11 +17,9 @@ h2{
 img{
     height: 500px;
     width: 500px;
-}
-
-.img{
     justify-self: right;
 }
+
 label{
     font-size: 30px;
 }
