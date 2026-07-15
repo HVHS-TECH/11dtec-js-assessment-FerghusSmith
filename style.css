@@ -6,11 +6,16 @@ nav {
     justify-self: center;
 }
 
-.gyrosGrid {
-    display: grid;
-    grid-template-columns: auto auto;
+h2{
+    font-size: 50px;
+    justify-self: center;
 }
 
+.grid{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 0.5%
+}
 img{
     height: 500px;
     width: 500px;
@@ -18,4 +23,11 @@ img{
 
 .img{
     justify-self: right;
+}
+label{
+    font-size: 30px;
+}
+h1{
+    font-size: 100px;
+    justify-self: center;
 }

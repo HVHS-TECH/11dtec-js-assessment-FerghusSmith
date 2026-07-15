@@ -11,16 +11,19 @@
 <body>
 
 <h1>Eugyros</h1>
-<br>
-<form onsubmit="return false">
-    <h2>clear cart</h2>
-    <input type="submit" value="clear cart" onclick=clearCart()>
-</form>
+<div class="clearCart">
+    <form onsubmit="return false">
+        <h2>clear cart</h2>
+        <input type="submit" value="clear cart" onclick=clearCart()>
+    </form>
+</div>
+
 <h2>Gryos</h2>
-<div class="gyrosGrid">
-    <div class="grid00o">
+<div class="gyrosGrid grid">
+    <div class="grid00o grido">
         <form onsubmit="return false">
             <label for="form00">Chicken Gyros $20</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="text" id="field00" name="form00" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(0,0)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(0,0)>
@@ -28,9 +31,10 @@
         </form>
     </div>
     <div class="grid00i img"><img src="img/00chickenGyros.jpg" alt="chicken gyros"></div>
-    <div class="grid01o">
+    <div class="grid01o grido">
         <form onsubmit="return false">
             <label for="form01">Beef Gyros $20</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="01Field" name="form01" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(0,1)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(0,1)>
@@ -38,9 +42,10 @@
         </form>
     </div>
     <div class="grid01i img"><img src="img/01beefGyros.jpg" alt="beef gyros"></div>
-    <div class="grid02o">
+    <div class="grid02o grido">
         <form onsubmit="return false">
             <label for="form02">Pork Gyros $20</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="02Field" name="form02" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(0,2)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(0,2)>
@@ -48,9 +53,10 @@
         </form>
     </div>
     <div class="grid02i img"><img src="img/02porkGyros.jpg" alt=""></div>
-    <div class="grid03o">
+    <div class="grid03o grido">
         <form onsubmit="return false">
             <label for="form03">Mixed Gyros $20</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="03Field" name="form03" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(0,3)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(0,3)>
@@ -60,11 +66,12 @@
     <div class="grid03i img"><img src="img/03mixedGyros.jpg" alt=""></div>
 </div>
 
-
-<div class="souvlakiGrid"><h2>Souvlaki</h2>
-    <div class="grid10o">
+<h2>Souvlaki</h2>
+<div class="souvlakiGrid grid">
+    <div class="grid10o grido">
         <form onsubmit="return false">
             <label for="form10">Chicken Souvlaki $20</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="10Field" name="form10" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(1,0)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(1,0)>
@@ -72,9 +79,10 @@
         </form>
     </div>
     <div class="grid10i img"><img src="img/10chickenSouvlaki.jpg" alt=""></div>
-    <div class="grid11o">
+    <div class="grid11o grido">
         <form onsubmit="return false">
             <label for="form11">Beef Souvlaki $20</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="11Field" name="form11" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(1,1)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(1,1)>
@@ -82,9 +90,10 @@
         </form>
     </div>
     <div class="grid11i img"><img src="img/11beefSouvlaki.jpg" alt=""></div>
-    <div class="grid12o">
+    <div class="grid12o grido">
         <form onsubmit="return false">
             <label for="form12">Pork Souvlaki $20</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="12Field" name="form12" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(1,2)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(1,2)>
@@ -92,9 +101,10 @@
         </form>
     </div>
     <div class="grid12i img"><img src="img/12porkSouvlaki.jpg" alt=""></div>
-    <div class="grid13o">
+    <div class="grid13o grido">
         <form onsubmit="return false">
             <label for="form13">Mixed Souvlaki $20</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="13Field" name="form13" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(1,3)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(1,3)>
@@ -104,10 +114,12 @@
     <div class="grid13i img"><img src="img/13mixedSouvlaki.jpg" alt=""></div>
 </div>
 
-<div class="drinksGrid"><h2>Drinks</h2>
-    <div class="grid20o">
+<h2>Drinks</h2>
+<div class="drinksGrid grid">
+    <div class="grid20o grido">
         <form onsubmit="return false">
             <label for="form20">Coca-cola $3</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="20Field" name="form20" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(2,0)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(2,0)>
@@ -115,9 +127,10 @@
         </form>
     </div>
     <div class="grid20i img"><img src="img/20cocaCola.jpg" alt=""></div>
-    <div class="grid21o">
+    <div class="grid21o grido">
         <form onsubmit="return false">
             <label for="form21">Sprite $3</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="21Field" name="form21" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(2,1)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(2,1)>
@@ -125,9 +138,10 @@
         </form>
     </div>
     <div class="grid21i img"><img src="img/21sprite.jpg" alt=""></div>
-    <div class="gris22o">
+    <div class="gris22o grido">
         <form onsubmit="return false">
             <label for="form22"></label>L&P $3<br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="22Field" name="form22" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(2,2)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(2,2)>
@@ -135,9 +149,10 @@
         </form>
     </div>
     <div class="grid22i img"><img src="img/22L&P.jpg" alt=""></div>
-    <div class="grid23o">
+    <div class="grid23o grido">
         <form onsubmit="return false">
             <label for="form23">Diet Coca-cola $3</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="23Field" name="form23" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(2,3)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(2,3)>
@@ -147,11 +162,12 @@
     <div class="grid23i img"><img src="img/23dietCoke.jpg" alt=""></div>
 </div>
 
-
-<div class="sidesGrid"><h2>Sides</h2>
-    <div class="grid30o">
+<h2>Sides</h2>
+<div class="sidesGrid grid">
+    <div class="grid30o grido">
         <form onsubmit="return false">
             <label for="form30">Hot Chips W Tzatiki</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="30Field" name="form30" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(3,0)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(3,0)>
@@ -159,9 +175,10 @@
         </form>
     </div>
     <div class="grid30i img"><img src="img/30hotChipsWTzatziki.jpg" alt=""></div>
-    <div class="grid31o">
+    <div class="grid31o grido">
         <form onsubmit="return false">
             <label for="form31"></label>Calamari<br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="31Field" name="form31" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(3,1)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(3,1)>
@@ -171,11 +188,12 @@
     <div class="grid31i img"><img src="img/31calamari.jpg" alt=""></div>
 </div>
 
-
-<div class="vegeGrid"><h2>Vege</h2>
-    <div class="grid40o">
+<h2>Vege</h2>
+<div class="vegeGrid grid">
+    <div class="grid40o grido">
         <form onsubmit="return false">
             <label for="form40">Greek Salad</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="40Field" name="form40" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(4,0)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(4,0)>
@@ -183,9 +201,10 @@
         </form>
     </div>
     <div class="grid40i img"><img src="img/40greekSalad.jpg" alt=""></div>
-    <div class="grid41o">
+    <div class="grid41o grido">
         <form onsubmit="return false">
             <label for="form41">Mousaka</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="41Field" name="form41" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(4,1)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(4,1)>
@@ -193,9 +212,10 @@
         </form>
     </div>
     <div class="grid41i img"><img src="img/41mousaka.jpg" alt=""></div>
-    <div class="grid42o">
+    <div class="grid42o grido">
         <form onsubmit="return false">
             <label for="form42">Yemista</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="42Field" name="form42" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(4,2)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(4,2)>
@@ -205,11 +225,12 @@
     <div class="grid42i img"><img src="img/42yemista.jpg" alt=""></div>
 </div>
 
-
-<div class="dessertGrid"><h2>Dessert</h2>
-    <div class="grid50o">
+<h2>Dessert</h2>
+<div class="dessertGrid grid">
+    <div class="grid50o grido">
         <form onsubmit="return false">
             <label for="form50">Baklava</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="50Field" name="form50" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(5,0)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(5,0)>
@@ -217,9 +238,10 @@
         </form>
     </div>
     <div class="grid50i img"><img src="img/50baklava.jpg" alt=""></div>
-    <div class="grid51o">
+    <div class="grid51o grido">
         <form onsubmit="return false">
             <label for="form51">Galaktoboureko</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="51Field" name="form51" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(5,1)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(5,1)>
@@ -227,9 +249,10 @@
         </form>
     </div>
     <div class="grid51i img"><img src="img/51galaktoboureko.jpg" alt=""></div>
-    <div class="grid52o">
+    <div class="grid52o grido">
         <form onsubmit="return false">
             <label for="form52">Revani</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="52Field" name="form52" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(5,2)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(5,2)>
@@ -237,9 +260,10 @@
         </form>
     </div>
     <div class="grid52i img"><img src="img/52revani.jpg" alt=""></div>
-    <div class="grid53o">
+    <div class="grid53o grido">
         <form onsubmit="return false">
             <label for="form53">Ice Cream</label><br>
+            <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
             <input type="number" id="53Field" name="form53" placeholder="1" min="1">
             <input type="submit" value="add to cart" onclick=addToCart(5,3)>
             <input type="submit" value="remove from cart" onclick=removeFromCart(5,3)>
