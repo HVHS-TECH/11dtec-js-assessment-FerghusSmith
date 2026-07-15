@@ -8,9 +8,7 @@ nav {
 
 h2{
     font-size: 50px;
-    justify-self: center;
 }
-
 .grid{
     display: grid;
     grid-template-columns: auto auto;
