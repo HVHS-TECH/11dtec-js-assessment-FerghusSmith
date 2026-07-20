@@ -125,9 +125,9 @@ function orderFood(){
             getReceipt(userMoney, userName);
         } else {
             console.log("you can not but this")
-        } else {
-            document.getElementById("receiptOutput").innerHTML += "<p>invalid input</p>"
         }
+    } else {
+        document.getElementById("receiptOutput").innerHTML += "<p>invalid input</p>"
     }
 
 }
