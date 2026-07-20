@@ -101,10 +101,11 @@ function removeFromCart(_itemGroup, _itemInfo){
 
 function orderFood(){
     console.log("running function orderFood")
-    const MONEY_FIELD = document.getElementById("moneyField");
+    const MONEY_FIELD = number(document.getElementById("moneyField"));
     const NAME_FIELD = document.getElementById("nameField");
     userMoney = MONEY_FIELD.value;
     userName = NAME_FIELD.value;
+    validName = isNaN(NAME_FIELD.value);
     console.log("userName: "+userName);
     console.log("userMoney: "+userMoney);
     totalCost = 0;
