@@ -57,7 +57,7 @@ function addToCart(_itemGroup, _itemInfo){
     thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
-    if (thisField < 1){
+    if (thisField = null){
         var thisField = 1;
         console.log("thisField set to "+thisField);
     }
