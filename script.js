@@ -1,5 +1,5 @@
-/* variables */
 console.log("running script.js");
+/* variables */
 let groupArray = [
     /*Gyros*/[
         {item: "Chicken Gyros", cost: 20, order: 0},
@@ -37,6 +37,7 @@ let groupArray = [
 ];
 var totalCost = 0;
 var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
+
 /* main code */
 if (savedArray != null){
     console.log(savedArray);
