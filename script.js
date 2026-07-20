@@ -37,6 +37,9 @@ let groupArray = [
 ];
 var totalCost = 0;
 var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
+var userName;
+var userMoney;
+var validName;
 
 /* main code */
 if (savedArray != null){
