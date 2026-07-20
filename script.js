@@ -111,7 +111,7 @@ function orderFood(){
     userName = NAME_FIELD.value;
     validName = isNaN(NAME_FIELD.value);
     validMoney = !isNaN(MONEY_FIELD.value);
-    if(validName && validMoney){
+    if(validName == true & validMoney == true){
         console.log("userName: "+userName);
         console.log("userMoney: "+userMoney);
         totalCost = 0;
