@@ -17,23 +17,27 @@
 </form>
 <!-- to add a new item:
 1. follow steps at the top of the js file
-2. copy one block of code (from the start of <div class="grid** grido"> to the end of <div class="gridd##i img"><img src="file.file" alt="text"></div>)
-3. replace values
-    
+2. copy one block of code
+3. replace values:
+    replace numbers (#) (the first # is for the group, ie souvlaki. the second # is for the item, ie chicken souvlaki)
+4. add image to images folder
+        
 -->
 <h2>Gryos</h2>
 <div class="gyrosGrid grid">
+    <!--copy from here-->
     <div class="grid00o grido">
         <form onsubmit="return false">
-            <label for="form00">Chicken Gyros $20</label><br>
+            <label for="form00">Chicken Gyros $20</label><br> <!--values to change: form00 (form##), chicken Gyros $20 (item name $item cost) -->
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="text" id="field00" name="form00" placeholder="1" min="1">
-            <input type="submit" value="add to cart" onclick=addToCart(0,0)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(0,0)>
-            <div id="output00"></div>
+            <input type="text" id="field00" name="form00" placeholder="1" min="1"> <!--values to change: field00 (field##), form00 (form##) -->
+            <input type="submit" value="add to cart" onclick=addToCart(0,0)> <!--values to change: addToCart(0,0) (addToCart(#,#)) -->
+            <input type="submit" value="remove from cart" onclick=removeFromCart(0,0)> <!--values to change: removeFromCart(0,0) (removeFromCart(#,#))-->
+            <div id="output00"></div> <!--values to change: output00 (output##) -->
         </form>
     </div>
-    <div class="grid00i img"><img src="img/00chickenGyros.jpg" alt="chicken gyros"></div>
+    <div class="grid00i img"><img src="img/00chickenGyros.jpg" alt="chicken gyros"></div> <!--values to change: grid00i (grid##i), img/00chickenGyros.jpg (img/file.file), chicken gyros (item name)  -->
+    <!--copy to here-->
     <div class="grid01o grido">
         <form onsubmit="return false">
             <label for="form01">Beef Gyros $20</label><br>
