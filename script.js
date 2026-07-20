@@ -105,7 +105,7 @@ function removeFromCart(_itemGroup, _itemInfo){
 
 function orderFood(){
     console.log("running function orderFood")
-    const MONEY_FIELD = number(document.getElementById("moneyField"));
+    const MONEY_FIELD = Number(document.getElementById("moneyField"));
     const NAME_FIELD = document.getElementById("nameField");
     userMoney = MONEY_FIELD.value;
     userName = NAME_FIELD.value;
