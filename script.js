@@ -1,5 +1,10 @@
 console.log("running script.js");
 /* variables */
+/* to add a new item:
+1. copy one line into the right group (ie. gyros)
+2. replace the information (ie. name: "Chicken Gyros" to "Fish Gyros", cost: "20" to "25")
+    DO NOT CHANGE THE ORDER VALUE!!!
+3. add the order information on the HTML page */
 let groupArray = [
     /*Gyros*/[
         {item: "Chicken Gyros", cost: 20, order: 0},
