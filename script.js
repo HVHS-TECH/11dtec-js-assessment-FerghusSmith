@@ -40,6 +40,7 @@ var savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
 var userName;
 var userMoney;
 var validName;
+var validMoney;
 
 /* main code */
 if (savedArray != null){
@@ -109,20 +110,26 @@ function orderFood(){
     userMoney = MONEY_FIELD.value;
     userName = NAME_FIELD.value;
     validName = isNaN(NAME_FIELD.value);
-    console.log("userName: "+userName);
-    console.log("userMoney: "+userMoney);
-    totalCost = 0;
-    for (var o = 0; o < savedArray.length; o++){
-        for (var oo = 0; oo < savedArray[o].length; oo++){
-            totalCost = totalCost + savedArray[o][oo].cost*savedArray[o][oo].order;
+    validMoney = !isNaN(MONEY_FIELD.value);
+    if(validName && validMoney){
+        console.log("userName: "+userName);
+        console.log("userMoney: "+userMoney);
+        totalCost = 0;
+        for (var o = 0; o < savedArray.length; o++){
+            for (var oo = 0; oo < savedArray[o].length; oo++){
+                totalCost = totalCost + savedArray[o][oo].cost*savedArray[o][oo].order;
+            }
+        }
+        if ((userMoney-totalCost) >= 0){
+            console.log("payment accepted");
+            getReceipt(userMoney, userName);
+        } else {
+            console.log("you can not but this")
+        } else {
+            document.getElementById("receiptOutput").innerHTML += "<p>invalid input</p>"
         }
     }
-    if ((userMoney-totalCost) >= 0){
-        console.log("payment accepted");
-        getReceipt(userMoney, userName);
-    } else {
-        console.log("you can not but this")
-    }
+
 }
 
 function getReceipt(_userMoney, _userName){
