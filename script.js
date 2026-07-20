@@ -54,11 +54,11 @@ if (savedArray != null){
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
     const FIELD_00 = document.getElementById("field00");
-    thisField = Number(FIELD_00.value);
+    var thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
-    if (FIELD_00 = null){
-        var thisField = 1;
+    if (FIELD_00 == null){
+        thisField = 1;
         console.log("thisField set to "+thisField);
     }
     console.log("if statemnet done")
@@ -76,11 +76,11 @@ function addToCart(_itemGroup, _itemInfo){
 function removeFromCart(_itemGroup, _itemInfo){
     if(groupArray[_itemGroup][_itemInfo].order > 0){
         const FIELD_00 = document.getElementById("field00");
-        thisField = Number(FIELD_00.value);
+        var thisField = Number(FIELD_00.value);
         console.log("running function addToCart");
         console.log("thisField: "+thisField);
         if (thisField < 1){
-            var thisField = 1;
+            thisField = 1;
             console.log("thisField set to "+thisField);
         }
         console.log("if statemnet done")
