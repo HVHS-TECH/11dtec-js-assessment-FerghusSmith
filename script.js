@@ -66,7 +66,6 @@ function addToCart(_itemGroup, _itemInfo){
         thisField = 0;
         console.log("thisField set to "+thisField);
         document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>Invalid order</p>"
-        document.getElementById("output"+_itemGroup+_itemInfo).innerHTML += "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
     }
     console.log("if statemnet done")
     groupArray[_itemGroup][_itemInfo].order = groupArray[_itemGroup][_itemInfo].order + thisField;
