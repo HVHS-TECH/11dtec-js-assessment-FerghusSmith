@@ -62,7 +62,7 @@ function addToCart(_itemGroup, _itemInfo){
     var thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
-    if (thisField < 1 || thisField > 99){
+    if (thisField < 0 || thisField > 99){
         thisField = 0;
         console.log("thisField set to "+thisField);
         document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>Invalid order</p>"
