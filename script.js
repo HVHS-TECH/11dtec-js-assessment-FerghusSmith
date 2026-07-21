@@ -116,8 +116,8 @@ function orderFood(){
     userMoney = MONEY_FIELD.value;
     userName = NAME_FIELD.value;
     validName = isNaN(NAME_FIELD.value);
-    invalidMoney = isNaN(MONEY_FIELD.value);
-    if(validName == true & invalidMoney == false){
+    validMoney = isNaN(MONEY_FIELD.value);
+    if(validName == true & validMoney == true){
         console.log("userName: "+userName);
         console.log("userMoney: "+userMoney);
         totalCost = 0;
@@ -135,7 +135,7 @@ function orderFood(){
     } else {
         if(validName == false){
             document.getElementById("receiptOutput").innerHTML += "<p>invalid username</p>"
-        } else if(invalidMoney == true){
+        } else if(validMoney == false){
             document.getElementById("receiptOutput").innerHTML += "<p>invalid money</p>"
         }
     }
