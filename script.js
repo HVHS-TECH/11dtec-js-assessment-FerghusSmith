@@ -111,11 +111,12 @@ function removeFromCart(_itemGroup, _itemInfo){
 
 function orderFood(){
     console.log("running function orderFood")
-    const MONEY_FIELD = Number(document.getElementById("moneyField"));
+    const MONEY_FIELD = (document.getElementById("moneyField"));
     const NAME_FIELD = document.getElementById("nameField");
     userMoney = MONEY_FIELD.value;
     userName = NAME_FIELD.value;
-    validName = isNaN(NAME_FIELD.value);
+    validName = isNaN(userName.value);
+    validMoney = userMoney > 0;
     if(validName == true){
         console.log("userName: "+userName);
         console.log("userMoney: "+userMoney);
@@ -134,6 +135,8 @@ function orderFood(){
     } else {
         if(validName == false){
             document.getElementById("receiptOutput").innerHTML += "<p>invalid username</p>"
+        } else if(validMoney == false){
+            document.getElementById("receiptOutput").innerHTML += "<p>invalid money</p>"
         }
     }
 
