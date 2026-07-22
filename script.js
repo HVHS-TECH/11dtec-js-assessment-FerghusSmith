@@ -146,7 +146,7 @@ function getReceipt(_userMoney, _userName){
     console.log("running fuction getReceipt");
     order = savedArray;
     var change = _userMoney - totalCost;
-    document.getElementById("receiptOutput").innerHTML = "<p>you are '"+userName+"'</p>";
+    document.getElementById("receiptOutput").innerHTML = "<p>you are "+_userName+"</p>";
     document.getElementById("receiptOutput").innerHTML = "<p>you ordered:</p>";
     for (var i = 0; i < order.length; i++){
         for (var ii = 0; ii < order[i].length; ii++){
@@ -158,12 +158,10 @@ function getReceipt(_userMoney, _userName){
         }
     }
     document.getElementById("receiptOutput").innerHTML += "<p>total cost:"+totalCost+"</p>"
-    document.getElementById("receiptOutput").innerHTML += "<p>"+_userMoney+"</p>"
-    document.getElementById("receiptOutput").innerHTML += "<p>"+(_userMoney-totalCost)+"</p>"
+    document.getElementById("receiptOutput").innerHTML += "<p>your money: "+_userMoney+"</p>"
+    document.getElementById("receiptOutput").innerHTML += "<p>your change: "+(_userMoney-totalCost)+"</p>"
     console.log("total cost: $"+totalCost);
     console.log("change: $"+change);
-    console.log("user: "+_userName);
-    document.getElementById("receiptOutput").innerHTML += "<p>"+order[i][ii].order+" "+order[i][ii].item+" $"+(order[i][ii].order*order[i][ii].cost)+"</p>"
 }
 function clearCart(){
     console.log("running function 'clearCart'");
