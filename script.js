@@ -165,7 +165,6 @@ function orderFood(){
             document.getElementById("receiptOutput").innerHTML += "<p>invalid money</p>"
         }
     }
-
 }
 
 function getReceipt(_userMoney, _userName){
