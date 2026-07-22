@@ -58,39 +58,49 @@ if (savedArray != null){
 
 /* functions */
 function addToCart(_itemGroup, _itemInfo){
+    //this function runs when the user orders an item of food
     const FIELD_00 = document.getElementById("field00");
     var thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
+    //checking that the user didn't order outside of the boundaries
     if (thisField < 0 || thisField > 99){
         thisField = 0;
         console.log("thisField set to "+thisField);
         document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>Invalid order</p>"
     }
     console.log("if statemnet done")
+    //adding order to the correct object
     groupArray[_itemGroup][_itemInfo].order = groupArray[_itemGroup][_itemInfo].order + thisField;
     var thisItem = groupArray[_itemGroup][_itemInfo];
     totalCost = totalCost + thisItem.cost;
     console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
     console.log("the total cost of your cart is $"+totalCost);
     sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
+    //saving the order so that the user can change pages without loosing their order
     savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
     console.log(savedArray[_itemGroup][_itemInfo]);
+    //outputing the order on the page so that the user knows how much they bought
     document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
 }
 
 function removeFromCart(_itemGroup, _itemInfo){
+    //this function runs when the user removes items from their cart
+    //checking that there are items to remove
     if(groupArray[_itemGroup][_itemInfo].order > 0){
         const FIELD_00 = document.getElementById("field00");
         var thisField = Number(FIELD_00.value);
         console.log("running function addToCart");
         console.log("thisField: "+thisField);
-        if (thisField < 1){
-            thisField = 1;
+        //checking that the user is removing an amount within the boundaries
+        if (thisField < 1 || thisField > 99){
+            thisField = 0;
             console.log("thisField set to "+thisField);
         }
         console.log("if statemnet done")
+        //updating the order
         groupArray[_itemGroup][_itemInfo].order = groupArray[_itemGroup][_itemInfo].order - thisField;
+        //making sure that the user can't order negative food
         if(groupArray[_itemGroup][_itemInfo].order < 0){
             groupArray[_itemGroup][_itemInfo].order = 0;
         }
@@ -99,8 +109,10 @@ function removeFromCart(_itemGroup, _itemInfo){
         console.log("you have ordered "+thisItem.order+" "+thisItem.item+" for $"+(thisItem.cost*thisItem.order));
         console.log("the total cost of your cart is $"+totalCost);
         sessionStorage.setItem("savedArray", JSON.stringify(groupArray));
+        //saving the order
         savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
         console.log(savedArray[_itemGroup][_itemInfo]);
+        // 
         if(groupArray[_itemGroup][_itemInfo].order != 0){
             document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
         }else{
