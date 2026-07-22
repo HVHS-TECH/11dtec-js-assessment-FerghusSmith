@@ -147,7 +147,7 @@ function getReceipt(_userMoney, _userName){
     order = savedArray;
     var change = _userMoney - totalCost;
     document.getElementById("receiptOutput").innerHTML = "<p>you are "+_userName+"</p>";
-    document.getElementById("receiptOutput").innerHTML = "<p>you ordered:</p>";
+    document.getElementById("receiptOutput").innerHTML += "<p>you ordered:</p>";
     for (var i = 0; i < order.length; i++){
         for (var ii = 0; ii < order[i].length; ii++){
             if (order[i][ii].order > 0){
