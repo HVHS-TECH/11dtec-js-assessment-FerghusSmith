@@ -112,7 +112,7 @@ function removeFromCart(_itemGroup, _itemInfo){
         //saving the order
         savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
         console.log(savedArray[_itemGroup][_itemInfo]);
-        // 
+        //checking if the order is 0. If so, don't show the order on the page
         if(groupArray[_itemGroup][_itemInfo].order != 0){
             document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
         }else{
@@ -122,32 +122,46 @@ function removeFromCart(_itemGroup, _itemInfo){
 }
 
 function orderFood(){
+    //this function runs when the user orders their food
     console.log("running function orderFood")
+    //pulling values from money and username inputs
     const MONEY_FIELD = (document.getElementById("moneyField"));
     const NAME_FIELD = document.getElementById("nameField");
     userMoney = MONEY_FIELD.value;
     userName = NAME_FIELD.value;
+    //validating that the name is not a number
     validName = isNaN(userName.value);
+    //checking if the username and money are valid
     if(validName == true & userMoney > 0){
+        //username and money were valid
         console.log("userName: "+userName);
         console.log("userMoney: "+userMoney);
+        //resetting total cost incase of earlier errors
         totalCost = 0;
+        //adding the cost of every item ordered to the total cost
         for (var o = 0; o < savedArray.length; o++){
             for (var oo = 0; oo < savedArray[o].length; oo++){
                 totalCost = totalCost + savedArray[o][oo].cost*savedArray[o][oo].order;
             }
         }
+        //checking if the user had enough money
         if ((userMoney-totalCost) >= 0){
+            //user had enough money. Reciept can be printed
             console.log("payment accepted");
             getReceipt(userMoney, userName);
         } else {
+            //user didn't have enough money
             console.log("you can not but this")
             document.getElementById("receiptOutput").innerHTML += "<p>you can not buy this</p>"
         }
     } else {
+        //username or usermoney or both were invalid
         if(validName == false){
+            //username was invalid
             document.getElementById("receiptOutput").innerHTML += "<p>invalid username</p>"
-        }else if(userMoney < 0){
+        }
+        if(userMoney < 0){
+            //money was invalid
             document.getElementById("receiptOutput").innerHTML += "<p>invalid money</p>"
         }
     }
@@ -155,6 +169,7 @@ function orderFood(){
 }
 
 function getReceipt(_userMoney, _userName){
+    //this function prints the receipt
     console.log("running fuction getReceipt");
     order = savedArray;
     var change = _userMoney - totalCost;
