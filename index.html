@@ -32,9 +32,9 @@
         <form onsubmit="return false">
             <label for="form00">Chicken Gyros $20</label><br> <!--values to change: form00 (form##), chicken Gyros $20 (item name $item cost) -->
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="text" id="field00" name="form00" placeholder="1" min="1" max="99"> <!--values to change: field00 (field##), form00 (form##) -->
-            <input type="submit" value="add to cart" onclick=addToCart(0,0)> <!--values to change: addToCart(0,0) (addToCart(#,#)) -->
-            <input type="submit" value="remove from cart" onclick=removeFromCart(0,0,field00)> <!--values to change: removeFromCart(0,0,field00) (removeFromCart(#,#,field##))-->
+            <input type="number" id="field00" name="form00" placeholder="1" min="1" max="99"> <!--values to change: field00 (field##), form00 (form##) -->
+            <input type="submit" value="add to cart" onclick="addToCart(0,0,'field00')"> <!--values to change: addToCart(0,0) (addToCart(#,#)) -->
+            <input type="submit" value="remove from cart" onclick="removeFromCart(0,0,'field00')"> <!--values to change: removeFromCart(0,0,field00) (removeFromCart(#,#,field##))-->
             <div id="output00"></div> <!--values to change: output00 (output##) -->
         </form>
     </div>
@@ -44,9 +44,9 @@
         <form onsubmit="return false">
             <label for="form01">Beef Gyros $20</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="01Field" name="form01" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(0,1)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(0,1)>
+            <input type="number" id="field01" name="form01" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(0,1,'field01')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(0,1,'field01')">
             <div id="output01"></div>
         </form>
     </div>
@@ -55,9 +55,9 @@
         <form onsubmit="return false">
             <label for="form02">Pork Gyros $20</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="02Field" name="form02" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(0,2)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(0,2)>
+            <input type="number" id="field02" name="form02" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(0,2,'field02')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(0,2,'field02')">
             <div id="output02"></div>
         </form>
     </div>
@@ -66,9 +66,9 @@
         <form onsubmit="return false">
             <label for="form03">Mixed Gyros $20</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="03Field" name="form03" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(0,3)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(0,3)>
+            <input type="number" id="field03" name="form03" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(0,3,'field03')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(0,3,'field03')">
             <div id="output03"></div>
         </form>
     </div>
@@ -81,9 +81,9 @@
         <form onsubmit="return false">
             <label for="form10">Chicken Souvlaki $20</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="10Field" name="form10" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(1,0)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(1,0)>
+            <input type="number" id="field10" name="form10" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(1,0,'field10')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(1,0,'field10')">
             <div id="output10"></div>
         </form>
     </div>
@@ -92,9 +92,9 @@
         <form onsubmit="return false">
             <label for="form11">Beef Souvlaki $20</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="11Field" name="form11" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(1,1)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(1,1)>
+            <input type="number" id="field11" name="form11" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(1,1,'field11')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(1,1.,'field11')">
             <div id="output11"></div>
         </form>
     </div>
@@ -103,9 +103,9 @@
         <form onsubmit="return false">
             <label for="form12">Pork Souvlaki $20</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="12Field" name="form12" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(1,2)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(1,2)>
+            <input type="number" id="field12" name="form12" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(1,2,'field12')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(1,2,'field12')">
             <div id="output12"></div>
         </form>
     </div>
@@ -114,9 +114,9 @@
         <form onsubmit="return false">
             <label for="form13">Mixed Souvlaki $20</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="13Field" name="form13" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(1,3)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(1,3)>
+            <input type="number" id="field13" name="form13" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(1,3,'field13')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(1,3,'field13')"">
             <div id="output13"></div>
         </form>
     </div>
@@ -129,9 +129,9 @@
         <form onsubmit="return false">
             <label for="form20">Coca-cola $3</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="20Field" name="form20" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(2,0)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(2,0)>
+            <input type="number" id="field20" name="form20" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(2,0,'field20')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(2,0,'field20')">
             <div id="output20"></div>
         </form>
     </div>
@@ -140,9 +140,9 @@
         <form onsubmit="return false">
             <label for="form21">Sprite $3</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="21Field" name="form21" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(2,1)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(2,1)>
+            <input type="number" id="field21" name="form21" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(2,1,'field21')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(2,1,'field21')">
             <div id="output21"></div>
         </form>
     </div>
@@ -151,9 +151,9 @@
         <form onsubmit="return false">
             <label for="form22"></label>L&P $3<br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="22Field" name="form22" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(2,2)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(2,2)>
+            <input type="number" id="field22" name="form22" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(2,2,'field22')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(2,2,'field22')">
             <div id="output22"></div>
         </form>
     </div>
@@ -162,9 +162,9 @@
         <form onsubmit="return false">
             <label for="form23">Diet Coca-cola $3</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="23Field" name="form23" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(2,3)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(2,3)>
+            <input type="number" id="field23" name="form23" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(2,3,'field23')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(2,3,'field23')">
             <div id="output23"></div>
         </form>
     </div>
@@ -177,9 +177,9 @@
         <form onsubmit="return false">
             <label for="form30">Hot Chips W Tzatiki</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="30Field" name="form30" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(3,0)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(3,0)>
+            <input type="number" id="field30" name="form30" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(3,0,'field30')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(3,0,'field30')">
             <div id="output30"></div>
         </form>
     </div>
@@ -188,9 +188,9 @@
         <form onsubmit="return false">
             <label for="form31"></label>Calamari<br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="31Field" name="form31" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(3,1)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(3,1)>
+            <input type="number" id="field31" name="form31" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(3,1,'field31')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(3,1,'field31')">
             <div id="output31"></div>
         </form>
     </div>
@@ -203,9 +203,9 @@
         <form onsubmit="return false">
             <label for="form40">Greek Salad</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="40Field" name="form40" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(4,0)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(4,0)>
+            <input type="number" id="field40" name="form40" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(4,0,'field40')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(4,0,'field40')">
             <div id="output40"></div>
         </form>
     </div>
@@ -214,9 +214,9 @@
         <form onsubmit="return false">
             <label for="form41">Mousaka</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="41Field" name="form41" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(4,1)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(4,1)>
+            <input type="number" id="field41" name="form41" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(4,1,'field41')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(4,1,'field41')">
             <div id="output41"></div>
         </form>
     </div>
@@ -225,9 +225,9 @@
         <form onsubmit="return false">
             <label for="form42">Yemista</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="42Field" name="form42" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(4,2)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(4,2)>
+            <input type="number" id="field42" name="form42" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(4,2,'field42')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(4,2,'field42')">
             <div id="output42"></div>
         </form>
     </div>
@@ -240,9 +240,9 @@
         <form onsubmit="return false">
             <label for="form50">Baklava</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="50Field" name="form50" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(5,0)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(5,0)>
+            <input type="number" id="field50" name="form50" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(5,0,'field50')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(5,0,'field50')">
             <div id="output50"></div>
         </form>
     </div>
@@ -251,9 +251,9 @@
         <form onsubmit="return false">
             <label for="form51">Galaktoboureko</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="51Field" name="form51" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(5,1)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(5,1)>
+            <input type="number" id="field51" name="form51" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(5,1,'field51')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(5,1,'field51')">
             <div id="output51"></div>
         </form>
     </div>
@@ -262,9 +262,9 @@
         <form onsubmit="return false">
             <label for="form52">Revani</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="52Field" name="form52" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(5,2)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(5,2)>
+            <input type="number" id="field52" name="form52" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(5,2,'field52')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(5,2,'field52')">
             <div id="output52"></div>
         </form>
     </div>
@@ -273,9 +273,9 @@
         <form onsubmit="return false">
             <label for="form53">Ice Cream</label><br>
             <p>blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah</p>
-            <input type="number" id="53Field" name="form53" placeholder="1" min="1" max="99">
-            <input type="submit" value="add to cart" onclick=addToCart(5,3)>
-            <input type="submit" value="remove from cart" onclick=removeFromCart(5,3)>
+            <input type="number" id="field53" name="form53" placeholder="1" min="1" max="99">
+            <input type="submit" value="add to cart" onclick="addToCart(5,3,'field53')">
+            <input type="submit" value="remove from cart" onclick="removeFromCart(5,3,'field53')">
             <div id="output53"></div>
         </form>
     </div>

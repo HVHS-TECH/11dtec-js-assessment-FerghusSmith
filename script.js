@@ -58,85 +58,10 @@ if (savedArray != null){
 }
 
 /* functions */
-function addToCart(_itemGroup, _itemInfo){
+function addToCart(_itemGroup, _itemInfo, _field){
     //this function runs when the user orders an item of food
-    const FIELD_00 = document.getElementById("field00");
-    const FIELD_01 = document.getElementById("field01");
-    const FIELD_02 = document.getElementById("field02");
-    const FIELD_03 = document.getElementById("field03");
-    const FIELD_10 = document.getElementById("field10");
-    const FIELD_11 = document.getElementById("field11");
-    const FIELD_12 = document.getElementById("field12");
-    const FIELD_13 = document.getElementById("field13");
-    const FIELD_20 = document.getElementById("field20");
-    const FIELD_21 = document.getElementById("field21");
-    const FIELD_22 = document.getElementById("field22");
-    const FIELD_23 = document.getElementById("field23");
-    const FIELD_30 = document.getElementById("field30");
-    const FIELD_31 = document.getElementById("field31");
-    const FIELD_40 = document.getElementById("field40");
-    const FIELD_41 = document.getElementById("field41");
-    const FIELD_42 = document.getElementById("field42");
-    const FIELD_50 = document.getElementById("field50");
-    const FIELD_51 = document.getElementById("field51");
-    const FIELD_52 = document.getElementById("field52");
-    const FIELD_53 = document.getElementById("field53");
-    if(_itemGroup = 0){
-        if(_itemInfo = 0){
-            thisField = (FIELD_00.value);
-        }else if(_itemInfo = 1){
-            thisField = (FIELD_01.value);
-        }else if(_itemInfo = 2){
-            thisField = (FIELD_02.value);
-        }else if(_itemInfo = 3){
-            thisField = (FIELD_03.value);
-        }else 
-    }else if(_itemGroup = 1){
-        if(_itemInfo = 0){
-            thisField = (FIELD_10.value);
-        }else if(_itemInfo = 1){
-            thisField = (FIELD_11.value);
-        }else if(_itemInfo = 2){
-            thisField = (FIELD_12.value);
-        }else if(_itemInfo = 3){
-            thisField = (FIELD_13.value);
-        }else 
-    }else if(_itemGroup = 2){
-        if(_itemInfo = 0){
-            thisField = (FIELD_20.value);
-        }else if(_itemInfo = 1){
-            thisField = (FIELD_21.value);
-        }else if(_itemInfo = 2){
-            thisField = (FIELD_22.value);
-        }else if(_itemInfo = 3){
-            thisField = (FIELD_23.value);
-        }else 
-    }else if(_itemGroup = 3){
-        if(_itemInfo = 0){
-            thisField = (FIELD_30.value);
-        }else if(_itemInfo = 1){
-            thisField = (FIELD_31.value);
-        }
-    }else if(_itemGroup = 4){
-        if(_itemInfo = 0){
-            thisField = (FIELD_40.value);
-        }else if(_itemInfo = 1){
-            thisField = (FIELD_41.value);
-        }else if(_itemInfo = 2){
-            thisField = (FIELD_42.value);
-        }
-    }else if(_itemGroup = 5){
-        if(_itemInfo = 0){
-            thisField = (FIELD_50.value);
-        }else if(_itemInfo = 1){
-            thisField = (FIELD_51.value);
-        }else if(_itemInfo = 2){
-            thisField = (FIELD_52.value);
-        }else if(_itemInfo = 3){
-            thisField = (FIELD_53.value);
-        }else 
-    } 
-    var thisField = Number(FIELD_00.value);
+    const FIELD = document.getElementById(_field);
+    var thisField = Number(FIELD.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
     //checking that the user didn't order outside of the boundaries
