@@ -4,6 +4,7 @@ console.log("running script.js");
 1. copy one line into the right group (ie. gyros)
 2. replace the information (ie. name: "Chicken Gyros" to "Fish Gyros", cost: "20" to "25")
     DO NOT CHANGE THE ORDER VALUE!!!
+    also make a new constant
 3. add the order information on the HTML page */
 let groupArray = [
     /*Gyros*/[
@@ -60,11 +61,86 @@ if (savedArray != null){
 function addToCart(_itemGroup, _itemInfo){
     //this function runs when the user orders an item of food
     const FIELD_00 = document.getElementById("field00");
+    const FIELD_01 = document.getElementById("field01");
+    const FIELD_02 = document.getElementById("field02");
+    const FIELD_03 = document.getElementById("field03");
+    const FIELD_10 = document.getElementById("field10");
+    const FIELD_11 = document.getElementById("field11");
+    const FIELD_12 = document.getElementById("field12");
+    const FIELD_13 = document.getElementById("field13");
+    const FIELD_20 = document.getElementById("field20");
+    const FIELD_21 = document.getElementById("field21");
+    const FIELD_22 = document.getElementById("field22");
+    const FIELD_23 = document.getElementById("field23");
+    const FIELD_30 = document.getElementById("field30");
+    const FIELD_31 = document.getElementById("field31");
+    const FIELD_40 = document.getElementById("field40");
+    const FIELD_41 = document.getElementById("field41");
+    const FIELD_42 = document.getElementById("field42");
+    const FIELD_50 = document.getElementById("field50");
+    const FIELD_51 = document.getElementById("field51");
+    const FIELD_52 = document.getElementById("field52");
+    const FIELD_53 = document.getElementById("field53");
+    if(_itemGroup = 0){
+        if(_itemInfo = 0){
+            thisField = (FIELD_00.value);
+        }else if(_itemInfo = 1){
+            thisField = (FIELD_01.value);
+        }else if(_itemInfo = 2){
+            thisField = (FIELD_02.value);
+        }else if(_itemInfo = 3){
+            thisField = (FIELD_03.value);
+        }else 
+    }else if(_itemGroup = 1){
+        if(_itemInfo = 0){
+            thisField = (FIELD_10.value);
+        }else if(_itemInfo = 1){
+            thisField = (FIELD_11.value);
+        }else if(_itemInfo = 2){
+            thisField = (FIELD_12.value);
+        }else if(_itemInfo = 3){
+            thisField = (FIELD_13.value);
+        }else 
+    }else if(_itemGroup = 2){
+        if(_itemInfo = 0){
+            thisField = (FIELD_20.value);
+        }else if(_itemInfo = 1){
+            thisField = (FIELD_21.value);
+        }else if(_itemInfo = 2){
+            thisField = (FIELD_22.value);
+        }else if(_itemInfo = 3){
+            thisField = (FIELD_23.value);
+        }else 
+    }else if(_itemGroup = 3){
+        if(_itemInfo = 0){
+            thisField = (FIELD_30.value);
+        }else if(_itemInfo = 1){
+            thisField = (FIELD_31.value);
+        }
+    }else if(_itemGroup = 4){
+        if(_itemInfo = 0){
+            thisField = (FIELD_40.value);
+        }else if(_itemInfo = 1){
+            thisField = (FIELD_41.value);
+        }else if(_itemInfo = 2){
+            thisField = (FIELD_42.value);
+        }
+    }else if(_itemGroup = 5){
+        if(_itemInfo = 0){
+            thisField = (FIELD_50.value);
+        }else if(_itemInfo = 1){
+            thisField = (FIELD_51.value);
+        }else if(_itemInfo = 2){
+            thisField = (FIELD_52.value);
+        }else if(_itemInfo = 3){
+            thisField = (FIELD_53.value);
+        }else 
+    } 
     var thisField = Number(FIELD_00.value);
     console.log("running function addToCart");
     console.log("thisField: "+thisField);
     //checking that the user didn't order outside of the boundaries
-    if (thisField < 0 || thisField > 99){
+    if (thisField < 1 || thisField > 99){
         thisField = 0;
         console.log("thisField set to "+thisField);
         document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>Invalid order</p>"
@@ -81,7 +157,11 @@ function addToCart(_itemGroup, _itemInfo){
     savedArray = JSON.parse(sessionStorage.getItem("savedArray"));
     console.log(savedArray[_itemGroup][_itemInfo]);
     //outputing the order on the page so that the user knows how much they bought
-    document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
+    if(thisItem.order > 0){
+        document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = "<p>"+thisItem.order+"x "+thisItem.item+" costs $"+(thisItem.cost*thisItem.order)+"</p>"
+    }else{
+        document.getElementById("output"+_itemGroup+_itemInfo).innerHTML = ""
+    }
 }
 
 function removeFromCart(_itemGroup, _itemInfo){
@@ -171,18 +251,24 @@ function getReceipt(_userMoney, _userName){
     //this function prints the receipt
     console.log("running fuction getReceipt");
     order = savedArray;
+    //calculating change
     var change = _userMoney - totalCost;
     document.getElementById("receiptOutput").innerHTML = "<p>you are "+_userName+"</p>";
     document.getElementById("receiptOutput").innerHTML += "<p>you ordered:</p>";
+    //checking each item for order. if order is more than 0 then it prints as part of the receipt
     for (var i = 0; i < order.length; i++){
+        //item group
         for (var ii = 0; ii < order[i].length; ii++){
+            //specific item in group
             if (order[i][ii].order > 0){
+                //item has been ordered
                 totalCost = totalCost + (order[i][ii].cost*order[i][ii].order);
                 console.log(order[i][ii].order+" "+order[i][ii].item+" costing $"+(order[i][ii].cost*order[i][ii].order))
                 document.getElementById("receiptOutput").innerHTML += "<p>"+order[i][ii].order+" "+order[i][ii].item+" $"+(order[i][ii].order*order[i][ii].cost)+"</p>"
             }
         }
     }
+    //printing money values
     document.getElementById("receiptOutput").innerHTML += "<p>total cost:"+totalCost+"</p>"
     document.getElementById("receiptOutput").innerHTML += "<p>your money: "+_userMoney+"</p>"
     document.getElementById("receiptOutput").innerHTML += "<p>your change: "+(_userMoney-totalCost)+"</p>"
@@ -190,9 +276,13 @@ function getReceipt(_userMoney, _userName){
     console.log("change: $"+change);
 }
 function clearCart(){
+    //this function gets rid of every order
     console.log("running function 'clearCart'");
+    //setting every order to 0
     for (var o = 0; o < savedArray.length; o++){
+        //item group
         for (var oo = 0; oo < savedArray[o].length; oo++){
+            //specific item in group. setting to 0
             savedArray[o][oo].order = 0;
             console.log(savedArray[o][oo].item+": order set to 0");
             document.getElementById("output"+o+oo).innerHTML = "" 
